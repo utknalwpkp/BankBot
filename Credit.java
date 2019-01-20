@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Credit {
-	Person borrower;//person = new Person();//na razie w każdej klasie ta sama bo się pochrzani
+	Person borrower;
 	String overDueLoans;//przeterminowane kredyty
 	String loans;//pożyczki
-	String deposits;//pieniądze na koncie 0.5pkt dla 50tys i wzwyż co 10tys po 0.1pkt a może inaczej
-	ArrayList colateral= new ArrayList<String>();//rozbijemy na mieszkanie, dom samochód z przedziałami pienięznymi do 110tys do 550tys i dla domu do 55mln
+	String deposits;//pieniądze na koncie 
+	ArrayList collateral= new ArrayList<String>();//rozbije na mieszkanie, dom samochód
 	Double point=0.0;
 	
 																							/*
@@ -17,11 +17,11 @@ public class Credit {
 																							String bankSwift;
 																							*/
 
-	Credit(String overDueLoans, String loans, String deposits, String colateral) {
+	Credit(String overDueLoans, String loans, String deposits, String collateral) {
 		this.overDueLoans=overDueLoans;
 		this.loans=loans;
 		this.deposits=deposits;
-		this.colateral=colateral;
+		this.collateral=collateral;
 		this.point=point;
 	}
 	Credit() {
@@ -54,7 +54,7 @@ public class Credit {
 		//int overDueCredits; 
 		System.out.println("Czy klient spłaca aktualnie pożyczki lub raty z któregoś kredytu(odp. tak/nie)");
 		loans=skan.nextLine();
-/*
+/* problemy z else if z powodu nie przestawienia eclipse 4.10 2018 12 z na java 8 z jdk11.0.1 którą testowałem wczoraj
 		if (loans.equals("Nie") || loans.equals("nie") || loans.equals("nie ma") || loans.equals("niema") 
 			|| loans.equals("nieposiada") || loans.equals("nie posiada") || loans.equals("NIE") 
 			|| loans.equals("NIEMA") || loans.equals("NIEPOSIADA") || loans.equals("NIE POSIADA")); { 
@@ -111,7 +111,7 @@ public class Credit {
 		return point;//.repeat(2);
 	}
 
-	Double ownedColateral() {
+	Double ownedCollateral() {
 		@SuppressWarnings("resource")
 		Scanner skan= new Scanner(System.in);
 		String flatString,carString,houseString;
@@ -136,7 +136,7 @@ public class Credit {
 			point=point+1;
 			houseString="Dom o wartości: ";
 		}
-		colateral.add(" "+flatString+String.valueOf(flat)+" "+carString+String.valueOf(car)+" "+houseString+String.valueOf(house)+
+		collateral.add(" "+flatString+String.valueOf(flat)+" "+carString+String.valueOf(car)+" "+houseString+String.valueOf(house)+
 				" Punkty zebrane podczas researchu: "+String.valueOf(point));
 		System.out.println("Punkty zebrane podczas działania programu :"+colateral.get(0));
 	skan.close();	
