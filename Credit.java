@@ -139,7 +139,7 @@ public class Credit {
 		colateral.add(" "+flatString+String.valueOf(flat)+" "+carString+String.valueOf(car)+" "+houseString+String.valueOf(house)+
 				" Punkty zebrane podczas researchu: "+String.valueOf(point));
 		System.out.println("Punkty zebrane podczas działania programu :"+colateral.get(0));
-		
+	skan.close();	
 	return point;
 }
 	}
