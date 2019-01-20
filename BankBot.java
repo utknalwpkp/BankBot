@@ -20,7 +20,7 @@ static Scanner skan = new Scanner(System.in);
 		Thread.sleep(500);
 		System.out.println(borrower.ownedDeposits());
 		Thread.sleep(500);
-		System.out.println(borrower.ownedColateral());
+		System.out.println(borrower.ownedCollateral());
 		//}
 		System.out.println("Program wspomagający decyzję kredytową napisał: Andrzej Trzaska github utknalwpkp");
 	}
