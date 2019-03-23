@@ -1,6 +1,6 @@
 # BankBot
 program to change logic or create new advanced logic
-I still waiting for giher skills
+I still waiting for higher skills
 learning slowly, little steps but still
 Today I learned:
 new java annotation  to increase resources for java.util.Scanner and using reset and close variable of Scanner wisely because its 
